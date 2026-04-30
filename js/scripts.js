@@ -1,1 +1,29 @@
 // Toggle between light and dark mode via a button
+// Check for a saved setting
+let darkMode = localStorage.getItem("darkMode");
+
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setitem('darkMode', 'enabled');
+}
+const enableLightMode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setitem('darkMode', null);
+}
+
+if(darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+
+    darkMode = localStorage.getItem('darkMode')
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    }
+    else {
+        enableLightMode();
+    }
+})

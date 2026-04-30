@@ -2,6 +2,23 @@
 @import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
 
 /* Set CSS Variables at the Root */
+:root {
+    --clr-light: #fdffc4;
+    --clr-dark: #00332a;
+    --clr-primary: #dbffa2;
+    --clr-secondary: #c3fcf2;
+    --clr-accent: #ff7750;
+
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+    
+    --ff-title: "Playfair Display", serif;
+    --ff-body: "Assistant", sans-serif;
+}
+
+
+
+
 
 /* Reset Margins/Padding/Box-Sizing */
 * {
@@ -22,6 +39,9 @@ body {
     font-size: 100%;
     line-height: 1.6;
     /* Set font-family, background-color, and font color using variables */
+    font-family: var(--ff-title);
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 header {
